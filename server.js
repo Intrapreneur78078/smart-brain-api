@@ -111,4 +111,4 @@ app.put("/image", (req, res) => {
 // bcrypt.compare("veggies", hash, function(err, res) {
 //     // res = false
 // });
-app.listen(3000);
+app.listen(proccess.env.PORT || 3000);
