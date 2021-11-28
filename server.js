@@ -20,7 +20,7 @@ db.select("*")
   .from("users")
   .then((data) => console.log(data));
 app.get("/", (req, res) => {
-  res.json(database.users);
+  res.json("Everything is working");
 });
 app.post("/signin", (req, res) => {
     const {email,password} = req.body;
@@ -111,4 +111,4 @@ app.put("/image", (req, res) => {
 // bcrypt.compare("veggies", hash, function(err, res) {
 //     // res = false
 // });
-app.listen(proccess.env.PORT || 3000);
+app.listen(3000);
