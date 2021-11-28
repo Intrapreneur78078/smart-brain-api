@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt-nodejs");
 const cors = require("cors");
+const PORT = process.env.PORT;
 app.use(bodyParser.json());
 app.use(cors());
 const knex = require("knex");
@@ -111,4 +112,4 @@ app.put("/image", (req, res) => {
 // bcrypt.compare("veggies", hash, function(err, res) {
 //     // res = false
 // });
-app.listen(3000);
+app.listen(PORT || 3000);
